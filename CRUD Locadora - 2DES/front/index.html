@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <button class="btnCad" onClick="showModal()">Cadastrar novo cliente</button>
+    <div class="tabela">
+        <table>
+            <thead>
+                <th>Codigo</th>
+                <th>Nome</th>
+                <th>Endereco</th>
+                <th>Telefone</th>
+            </thead>
+            <tbody class="listas">
+                <tr class="lista model">
+                    <td id="cod"></td>
+                    <td id="nomeCli"></td>
+                    <td id="endCli"></td>
+                    <td id="telCli"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- <div class="tabela2">
+        <table>
+            <thead>
+                <th>Codigo</th>
+                <th>NomeCli</th>
+                <th>NomeFilm</th>
+                <th>Genero</th>
+            </thead>
+            <tbody class="listaS">
+                <tr class="listA model">
+                    <td id="cod2"></td>
+                    <td id="nomeCli2"></td>
+                    <td id="nomeFilm"></td>
+                    <td id="genero"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <div class="modal model">
+        <div class="form-modal">
+            <!-- <input id="codCad" type="text" placeholder="Código automatico"> -->
+            <input id="nomeCad" type="text" placeholder="Nome do Cliente">
+            <input id="endCad" type="text" placeholder="Endereço do Cliente">
+            <input id="telCad" type="number" placeholder="Telefone do Cliente">
+            <button onClick="cadastrar()">Cadastrar</button>
+            <button id="cancel" onClick="showModal()">Cancelar</button>
+        </div>
+    </div>
+
+</body>
+<script src="./script.js"></script>
+</html>

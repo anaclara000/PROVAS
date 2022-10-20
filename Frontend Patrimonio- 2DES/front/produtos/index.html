@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <header>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="../home/index.html">Home</a></li>
+                    <li><a href="../produtos/index.html">Produtos</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="login">
+            <p>Bem vindo, admin</p>
+            <img src="../assets/user.png" alt="">
+        </div>
+    </header>
+    <div class="container">
+        <button class="btnCad" onClick="showModal()">Cadastrar</button>
+        <div class="modal model">
+            <div class="form-modal">
+                <input class="ni" placeholder="NI" type="text">
+                <input class="aquisicao" placeholder="Aquisição" type="text">
+                <input class="deno" type="text" placeholder="Denominação">
+                <input class="valor" placeholder="Valor"type="number">
+                <input class="img" placeholder="Enviar imagem" type="img">
+                <div class="botoes">
+                    <button id="cancel" onClick="showModal()">Cancelar</button>
+                    <button id="cad" onClick="cadastrar(this)">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main id="corpo">
+        <div class="card model">
+            <table>
+                <thead>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img id="img" src="../docs/assets/default.png" alt="Ilustração"></td>
+                        <td id="_id"></td>
+                        <td id="ni"></td>
+                        <td id="aquisicao"></td>
+                        <td id="denominacao"></td>
+                        <td id="valor">R$ </td>
+                        <td>
+                            <button id="del">X</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div> 
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

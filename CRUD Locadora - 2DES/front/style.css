@@ -1,0 +1,54 @@
+.model {
+    display: none;
+    visibility: hidden;
+}
+
+.tabela{
+    margin: 3%;
+    margin-left: 30%;
+    background-color: #ccc;
+    width: 40%;
+}
+
+td{
+    padding: 10px;
+}
+
+table{
+    margin-left: 10%;
+}
+
+h1{
+    margin-left: 43%;
+    margin-top: 2%;
+    font-size: 35px;
+}
+
+.btnCad{
+    margin-left: 45%;
+    padding: 3px 50px;
+}
+
+.btnCad:hover{
+    background-color: green;
+    cursor: pointer;
+    border: none;
+    padding: 5px 50px;
+}
+
+.modal {
+    margin-left: 35%;
+    width: 30vw;
+    height: 10vh;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    justify-content: center;
+}
+
+.form-modal > input{
+    margin-top: 30px;
+}
+
+.form-modal > button{
+    margin-top: 10px;
+}
