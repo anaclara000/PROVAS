@@ -93,6 +93,11 @@ h1 {
     display: flex;
 }
 
+.hora_entrega{
+    font-weight: bold;
+    margin-left: -20%;
+}
+
 .cliente_details p {
     font-weight: bold;
 }
@@ -109,6 +114,8 @@ h1 {
 }
 
 .preco_total {
+    text-align: center;
+    align-items: center;
     display: flex;
     padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.158);
@@ -135,4 +142,13 @@ h1 {
 
 .cont_endereco {
    width: 100%;
+}
+
+.idPedido{
+    display: none;
+}
+
+.total{
+    display: flex;
+    align-items: center;
 }

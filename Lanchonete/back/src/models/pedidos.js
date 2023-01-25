@@ -1,5 +1,5 @@
 const toCreate  = (model) =>{
-    return `INSERT INTO pedidos VALUES ('${model.id_pedido}', '${model.cliente}', '${model.endereco}', '${model.produto}', '${model.dia}', '${model.hora_pedido}', '${model.hora_entrega}', '${model.hora_fim}', '${model.entregador}')`;
+    return `INSERT INTO pedidos VALUES (DEFAULT, '${model.cliente}', '${model.endereco}', '${model.bairro}', '${model.cidade}' , '${model.produto}', '${model.quantidade}', '${model.preco}', '${model.dia}', '${model.hora_pedido}', '${model.hora_entrega}', '${model.hora_fim}', '${model.entregador}')`;
 }
 
 const toReadAll = () => {
@@ -15,7 +15,7 @@ const toDel = (model)=>{
 }
 
 const toUpdate = (model)=>{
-return `UPDATE pedidos SET id_pedido = ${model.id_pedido} cliente = '${model.cliente}', endereco = '${model.endereco}', produto = '${model.produto}', dia = '${model.dia}' , hora_pedido = '${model.hora_pedido}', hora_entrega = '${model.hora_entrega}' , hora_fim = '${model.hora_fim}', entregador = '${model.entregador}'`;
+return `UPDATE pedidos SET hora_entrega = '${model.hora_entrega}' , hora_fim = '${model.hora_fim}' where id_pedido = ${model.id_pedido}`;
 }
 
 module.exports = {

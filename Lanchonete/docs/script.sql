@@ -39,14 +39,14 @@ create table produtos(
 
 -- IMPORTANDO INFORMAÇÕES DO CSV
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Senai-Provas/Lanchonete/docs/entregadores.csv'
+LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Ana - Senai/Provas/Lanchonete/docs/entregadores.csv'
 INTO TABLE entregador
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Senai-Provas/Lanchonete/docs/pedidos.csv'
+LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Ana - Senai/Provas/Lanchonete/docs/pedidos.csv'
 INTO TABLE pedidos
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'

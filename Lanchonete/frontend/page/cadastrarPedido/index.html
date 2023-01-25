@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onLoad="carregar()">
 
     <div>
 
@@ -21,10 +21,40 @@
         </div>
 
         <div>
+            <p>Bairro</p>
+            <input type="text" class="bairro">
+        </div>
+
+        <div>
+            <p>Cidade</p>
+            <input type="text" class="cidade">
+        </div>
+
+        <div>
             <p>Produto</p>
-            <input type="text" class="produto">
+            <select class="select_produto" name="" id="" onClick="calcularPedido()">
+                <option value="selecionar">Selecione uma opção</option>
+                <option value="refrigerante">Refrigerante - Lata</option>
+                <option value="suco">Suco de Laranja - 500ml</option>
+                <option value="guaravita">Guaravita - 500ml</option>
+                <option value="x-burguer">X-Burguer</option>
+                <option value="x-egg">X-Egg</option>
+                <option value="x-bacon">X-Bacon</option>
+                <option value="x-tudo">X-Tudo</option>
+                <option value="x-frango">X-Frango</option>
+            </select>
         </div>
         
+        <div>
+            <p>Quantidade</p>
+            <input onkeyup="calcularPedido()" type="text" class="quantidade">
+        </div>
+
+        <div>
+            <p>Preço</p>
+            <input type="text" class="preco">
+        </div>
+
         <div>
             <p>Dia</p>
             <input type="text" class="dia">   
@@ -36,12 +66,30 @@
         </div>
 
         <div>
+            <p>Hora Entrada</p>
+            <input type="text" class="hora_entrada">
+        </div>
+
+        <div>
+            <p>Hora Saida</p>
+            <input type="text" class="hora_saida">
+        </div>
+
+        <div>
             <p>Entregador</p>
-            <input type="text" class="entregador">   
+            <select class="select_entregador" name="" id="">
+                <option value="selecionar">Selecione um entregador</option>
+                <option value="1">Jair</option>
+                <option value="2">Jafoi</option>
+                <option value="3">Flash</option>
+                <option value="4">Speed</option>
+            </select>
         </div>  
 
+        <button onClick="cad()">Cadastrar</button>
     </div>
     
     
 </body>
+<script src="./js/script.js"></script>
 </html>
