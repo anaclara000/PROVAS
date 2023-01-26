@@ -55,7 +55,7 @@ function preencher() {
 
                 novoCardPedido.querySelector('.preco_total').innerHTML = "R$ " + p.preco
             }
-            novoCardPedido.querySelector('.qtd').innerHTML = p.quantidade
+            novoCardPedido.querySelector('.qtd').innerHTML = p.quantidade + " u - "
 
             var PedidoEntregue = document.createElement('button')
             PedidoEntregue.innerHTML = "Pedido Entregue"
@@ -75,13 +75,19 @@ function preencher() {
             novoCardPedido.querySelector('.cidade').innerHTML += p.cidade
             novoCardPedido.querySelector('.bairro').innerHTML = p.bairro
             novoCardPedido.querySelector('.produto').innerHTML = p.produto
-            novoCardPedido.querySelector('.preco_total').innerHTML = p.preco
-            novoCardPedido.querySelector('.qtd').innerHTML = p.quantidade
+            novoCardPedido.querySelector('.preco_total').innerHTML = "R$ " + p.preco
+            novoCardPedido.querySelector('.qtd').innerHTML = p.quantidade + " u - "
             var entregaEnviar = document.createElement('button')
             entregaEnviar.innerHTML = "Enviar entrega"
             entregaEnviar.classList = 'btnEntrega'
             entregaEnviar.setAttribute('onClick', 'enviar(this)')
             novoCardPedido.appendChild(entregaEnviar)
+
+            // var cancelarEntrega = document.createElement('button')
+            // entregaEnviar.innerHTML = "Enviar entrega"
+            // entregaEnviar.classList = 'btnEntrega'
+            // entregaEnviar.setAttribute('onClick', 'enviar(this)')
+            // novoCardPedido.appendChild(entregaEnviar)
 
 
             document.querySelector('.andamento').appendChild(novoCardPedido)
@@ -118,7 +124,7 @@ function enviar(e) {
     })
         .then(resp => { return resp })
         .then(resp => {
-            alert("Valeu");
+            alert("Pedido enviado");
             window.location.reload()
 
         })
@@ -132,7 +138,8 @@ function pedidoEntregue(e) {
     fetch('http://localhost:3000/Pedidos/idDel/' + idPedido2, options)
         .then(response => response.json())
         .then(response => {
-            alert("Deletado")
+            alert("Pedido deletado")
+            window.location.reload()
         })
 
 

@@ -11,11 +11,15 @@ function carregar(){
     var segundos = hoje.getSeconds();
     horaAtual = hora + ':' + minutos + ":" + segundos;
 
-    let inpDia = document.querySelector(".dia").value = dataAtual
-    inpDia.disabled = true
+    document.querySelector(".dia").value = dataAtual
+    document.querySelector(".hora_pedido").value = horaAtual
 
-    let inpHora = document.querySelector(".hora_pedido").value = horaAtual
-    inpHora.disabled = true
+    let inpDia2 = document.querySelector(".dia")
+    inpDia2.disabled = true
+
+    let inptHora = document.querySelector(".hora_pedido")
+    inptHora.disabled = true
+
 
 }
 
@@ -101,8 +105,14 @@ function cad() {
         })
             .then(resp => { return resp })
             .then(resp => {
-                alert("foi")
-                window.location.reload()
+                if(resp.produto == null || resp.cliente == null ||
+                    resp.endereco == null || resp.quantidade == null || resp.entregador == null){
+                    alert("Por favor, preencher todos os campos")
+                }else{
+                    alert("Seu pedido esta sendo preparado")
+                    window.location.href = "../../Home/index.html"
+                }
+                
             })
     
 
