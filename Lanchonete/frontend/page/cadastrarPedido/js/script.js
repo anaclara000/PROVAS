@@ -105,9 +105,10 @@ function cad() {
         })
             .then(resp => { return resp })
             .then(resp => {
-                if(resp.produto == null || resp.cliente == null ||
-                    resp.endereco == null || resp.quantidade == null || resp.entregador == null){
+                if(produto == "" || cliente == "" ||
+                    endereco == "" || quantidade == "" || entregador == ""){
                     alert("Por favor, preencher todos os campos")
+                    console.log(options)
                 }else{
                     alert("Seu pedido esta sendo preparado")
                     window.location.href = "../../Home/index.html"

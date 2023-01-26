@@ -83,11 +83,11 @@ function preencher() {
             entregaEnviar.setAttribute('onClick', 'enviar(this)')
             novoCardPedido.appendChild(entregaEnviar)
 
-            // var cancelarEntrega = document.createElement('button')
-            // entregaEnviar.innerHTML = "Enviar entrega"
-            // entregaEnviar.classList = 'btnEntrega'
-            // entregaEnviar.setAttribute('onClick', 'enviar(this)')
-            // novoCardPedido.appendChild(entregaEnviar)
+            var cancelarEntrega = document.createElement('button')
+            cancelarEntrega.innerHTML = "Cancelar pedido"
+            cancelarEntrega.classList = 'btnCancelar'
+            cancelarEntrega.setAttribute('onClick', 'enviar(this)')
+            novoCardPedido.appendChild(cancelarEntrega)
 
 
             document.querySelector('.andamento').appendChild(novoCardPedido)
