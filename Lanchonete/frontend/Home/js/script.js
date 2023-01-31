@@ -28,7 +28,7 @@ function preencher() {
         novoCardPedido.style.display = 'block'
 
         // ESTA A CAMINHO
-        if (p.hora_entrega != "") {
+        if (p.hora_entrega != "" && p.hora_fim == "00:00:00") {
 
             console.log(p.hora_entrega);
 
@@ -65,7 +65,7 @@ function preencher() {
             document.querySelector('.caminho').appendChild(novoCardPedido)
         }
 
-        if (p.hora_entrega == "") {
+        if (p.hora_entrega == "" && p.hora_fim == "") {
 
             console.log('ssssss')
             novoCardPedido.querySelector('.idPedido').innerHTML = p.id_pedido
@@ -131,16 +131,34 @@ function enviar(e) {
 }
 
 function pedidoEntregue(e) {
-    var idPedido2 = e.parentNode.querySelector('.idPedido').innerHTML
+    var hoje = new Date();
+    var hora = hoje.getHours();
+    var minutos = hoje.getMinutes();
+    var segundos = hoje.getSeconds();
+    horaAtual = hora + ':' + minutos + ":" + segundos;
 
-    const options = { method: 'DELETE' };
+    var idPedido = e.parentNode.querySelector('.idPedido').innerHTML
+    var hora = e.parentNode.querySelector('.hora_pedido').innerHTML
+    console.log(hora)
 
-    fetch('http://localhost:3000/Pedidos/idDel/' + idPedido2, options)
-        .then(response => response.json())
-        .then(response => {
-            alert("Pedido deletado")
+    let options = JSON.stringify({
+        "id_pedido": idPedido,
+        "hora_entrega": hora,
+        "hora_fim": horaAtual
+    })
+
+    fetch("http://localhost:3000/Pedidos", {
+        "method": "PUT",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "body": options
+    })
+        .then(resp => { return resp })
+        .then(resp => {
+            alert("Pedido entregue");
             window.location.reload()
-        })
 
+        })
 
 }
