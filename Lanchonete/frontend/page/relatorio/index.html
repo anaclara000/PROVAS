@@ -4,12 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Relatório</title>
 </head>
-<body>
-    <div class="pedido">
-        <span class="produto">a</span>
-    </div>
+<body onload="carregar()">
+
+    <header class="title">
+        <i class='bx bx-coffee-togo'></i>
+        <h1>Lanchonete Luiziana</h1>
+        <i class='bx bx-coffee-togo'></i>
+        
+    </header>
+
+        
+
+        <main>
+            <div class="cont-pedido">
+                <div class="pedidos model">
+                    <div class="relatorio"> 
+                        <p class="idPedido title_desc">Pedido: </p>
+                        <div class="horas">
+                            <span class="hora_pedido"> - Hora do pedido: </span>
+                            <span class="hora_entrega"></span>
+                        </div>
+                    </div>
+                    <div class="primary">
+                       
+                        
+            
+                        <div class="cliente_details">
+                            <span class="nome_cliente title_desc">Cliente: </span>
+                        </div>
+                    </div>
+                    
+                    <div class="second">
+                        <div class="cliente_details cont_endereco">
+                            <span class="endereco title_desc">Endereço: </span>
+                            <span class="bairro"> </span>
+                            <span class="cidade">- </span>
+                        </div>
+            
+                        <div class="cont_pedido_details">
+                            <div class="pedido_details">
+                                    <span class="qtd title_desc"> Pedidos: </span>
+                                    <span class="produto">Coca Cola Lata -</span>
+                            </div>
+            
+                            <div class="total">
+                                <span class="preco_total title_desc">Total: </span>
+                            </div>
+                    </div>
+        
+                </div>
+                
+        
+            </div>
+            
+            
+        </main>
+
+        <div class="btn">
+            <a href="../../Home/index.html">Voltar</a>
+        </div>
+       
+
 </body>
-<script src="./js/script.js"></script>
+<script src="js/script.js"></script>
 </html>

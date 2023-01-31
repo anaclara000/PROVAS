@@ -28,7 +28,7 @@ function preencher() {
         novoCardPedido.style.display = 'block'
 
         // ESTA A CAMINHO
-        if (p.hora_entrega != "" && p.hora_fim == "00:00:00") {
+        if (p.hora_entrega != "" && p.hora_fim == "") {
 
             console.log(p.hora_entrega);
 
@@ -112,7 +112,7 @@ function enviar(e) {
     let options = JSON.stringify({
         "id_pedido": idPedido,
         "hora_entrega": horaAtual,
-        "hora_fim": "00:00:00"
+        "hora_fim": ""
     })
 
     fetch("http://localhost:3000/Pedidos", {
