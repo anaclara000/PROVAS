@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HOME</title>
+</head>
+<body onload="carregar()">
+    <h1 class="titulo">LOJÃO 1 REAL 2.0</h1>
+    <div class="containerTudao">
+        <div class="tudo">
+            <span class="titulos">SETORES</span>
+            <div class="container3">
+                <div class="setor" style="display:none">
+                    <span class="nome"></span>
+                    <span class="comissao"></span>
+                    <button class="btnsBaixo">VER</button>
+                </div>
+                <div class="add">
+                    <button onclick="abrirModalSetor()">+</button>
+                </div>
+            </div>
+            <span class="titulos">PRODUTOS</span>
+            <div class="container">
+                <div class="produtos" style="display:none">
+                    <span class="nome"></span>
+                    <span class="valor"></span>
+                    <button class="btnsBaixo">COMPRAR</button>
+                </div>
+                <div class="add">
+                    <button onClick="abrirModal()">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="tudo2">
+            <span class="titulos">FUNCIONÁRIOS</span>
+            <div class="container2">
+                
+                <div class="vendedor" style="display:none">
+                    <span class="nome_vendedor"></span>
+                    <span class="salario"></span>
+                    <div class="btns">
+                        <button>DEMETIR</button>
+                        <button>PROMOVER</button>
+                    </div>
+                </div>
+                <div class="add">
+                    <button onclick="abrirModalVendedor()">+</button>
+                </div>
+            </div>
+            
+           
+            <span class="titulos">VENDAS</span>
+            <div class="container4">
+                <div class="vendas" style="display:none">
+                    <span class="idVenda"></span>
+                    <span class="data"></span>
+                    <span class="id_vendedor"></span>
+                    <span class="detalhe"></span>
+                    <button class="btnsBaixo" onclick="abrirModalDetalhe(this)">DETALHES</button>
+                </div>
+                <div class="add">
+                    <button onClick="abrirModalVenda()">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+
+    <div class="cadProd model">
+        <div class="inputs">
+            <input class="inptNome" type="text" placeholder="Produto">
+            <input class="inptValor" type="text" placeholder="Valor">
+            <input class="inptSetor" type="text" placeholder="Setor">
+            <button onclick="cadProd()">Cadastrar</button>
+            <button onClick="fecharModal()">Cancelar</button>
+        </div>
+        
+    </div>
+
+    <div class="cadVendedor model">
+        <div class="inputs">
+            <input class="inptNomeVendedor" type="text" placeholder="Vendedor">
+            <input class="inptSalario" type="text" placeholder="Salário">
+            <input class="inptSetorVendedor" type="text" placeholder="Setor">
+            <button onclick="cadVendedor()">Cadastrar</button>
+            <button onClick="fecharModalVendedor()">Cancelar</button>
+        </div>
+        
+    </div>
+    <div class="cadSetor model">
+        <div class="inputs">
+            <input class="inptNomeSetor" type="text" placeholder="Vendedor">
+            <input class="inptComissao" type="text" placeholder="Comissão(%)">
+            <button onclick="cadSetor()">Cadastrar</button>
+            <button onClick="fecharModalSetor()">Cancelar</button>
+        </div>
+        
+    </div>
+
+    <div class="cadVendas model">
+        <div class="inputs">
+            <input class="inptData" type="text" placeholder="Data">
+            <input class="inptVendedor" type="text" placeholder="Vendedor">
+            
+            <button onclick="cadVenda()">Cadastrar</button>
+            <button onClick="fecharModalVenda()">Cancelar</button>
+        </div>
+        
+       
+    </div>
+
+    <div class="cadDetalhe model">
+        <div class="inputs">
+            <input id="IdVenda" type="text" >
+            <input class="inptProd" type="text" placeholder="produto">
+            <input class="inptQuantidade" type="text" placeholder="Quantidade">
+            <button onclick="cadDetalhe(this)">Cadastrar</button>
+            <button onClick="fecharModalDetalhe()">Cancelar</button>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>

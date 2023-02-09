@@ -13,6 +13,9 @@ function carregar() {
 
 
 function preencher() {
+    var valorTotal = 0
+
+
     relatorio.forEach(r => {
 
         var lista = cardPedido.cloneNode(true)
@@ -30,15 +33,16 @@ function preencher() {
             lista.querySelector('.preco_total').innerHTML += "R$ " + r.preco
             lista.querySelector('.qtd').innerHTML += r.quantidade + " u - "
         
-            console.log(r.hora_fim);
-    
+            var total2 = valorTotal += r.preco
+            console.log(total2);
+            document.querySelector('.totalDia').innerHTML = "Total: " + total2
             document.querySelector('.cont-pedido').appendChild(lista)
          }
         
 
     })
+    
+
+
 }
 
-function teste(){
-    alert('a')
-}
